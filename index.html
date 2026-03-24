@@ -216,31 +216,33 @@
     <p class="section-body">Completa el formulario y nos ponemos en contacto contigo para confirmar disponibilidad.</p>
 
     <form class="booking-form" action="https://formspree.io/f/mvzwewon" method="POST">
+      <input type="hidden" name="_subject" value="Nueva reservación — Hotel Munixkan">
+      <input type="hidden" name="_language" value="es">
       <div class="form-group">
-        <label>Nombre completo</label>
-        <input type="text" placeholder="Tu nombre" required>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Llegada</label>
-          <input type="date" required>
+          <label for="llegada">Llegada</label>
+          <input type="date" id="llegada" name="llegada" required>
         </div>
         <div class="form-group">
-          <label>Salida</label>
-          <input type="date" required>
+          <label for="salida">Salida</label>
+          <input type="date" id="salida" name="salida" required>
         </div>
       </div>
       <div class="form-group">
-        <label>Tipo de habitación</label>
-        <select required>
+        <label for="habitacion">Tipo de habitación</label>
+        <select id="habitacion" name="habitacion" required>
           <option value="">Seleccionar…</option>
           <option>Habitación Sencilla</option>
           <option>Habitación Doble</option>
         </select>
       </div>
       <div class="form-group">
-        <label>Teléfono / WhatsApp</label>
-        <input type="tel" placeholder="+52 55 6400 0003" required>
+        <label for="telefono">Teléfono / WhatsApp</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="+52 55 6400 0003" required>
       </div>
       <button type="submit" class="btn-book">Solicitar reservación</button>
     </form>
@@ -347,15 +349,6 @@
     });
   }, { threshold: 0.12 });
   reveals.forEach(el => observer.observe(el));
-
-  // Booking form
-  function handleBooking(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.btn-book');
-    btn.textContent = '✓ Solicitud enviada — te contactaremos pronto';
-    btn.style.background = '#5A6948';
-    btn.disabled = true;
-  }
 
   // Set min date for booking inputs
   const today = new Date().toISOString().split('T')[0];
