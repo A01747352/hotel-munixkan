@@ -52,8 +52,8 @@
 <section class="about" id="nosotros">
   <div class="about-inner">
     <img
-      src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=900&q=80"
-      alt="Recepción Hotel Munixkan"
+      src="img/entrance.jpeg"
+      alt="Fachada Hotel Munixkan"
       class="about-img"
     />
     <div class="about-text">
@@ -93,7 +93,7 @@
     <div class="rooms-grid">
       <!-- Sencilla -->
       <div class="room-card reveal">
-        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="Habitación Sencilla" />
+        <img src="img/single_room.jpeg" alt="Habitación Sencilla" />
         <div class="room-card-body">
           <p class="room-type">Individual</p>
           <h3 class="room-name">Habitación Sencilla</h3>
@@ -116,7 +116,7 @@
 
       <!-- Doble -->
       <div class="room-card reveal reveal-delay-1">
-        <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=800&q=80" alt="Habitación Doble" />
+        <img src="img/double_room.jpeg" alt="Habitación Doble" />
         <div class="room-card-body">
           <p class="room-type">Pareja / Familia</p>
           <h3 class="room-name">Habitación Doble</h3>
@@ -216,33 +216,31 @@
     <p class="section-body">Completa el formulario y nos ponemos en contacto contigo para confirmar disponibilidad.</p>
 
     <form class="booking-form" action="https://formspree.io/f/mvzwewon" method="POST">
-      <input type="hidden" name="_subject" value="Nueva reservación — Hotel Munixkan">
-      <input type="hidden" name="_language" value="es">
       <div class="form-group">
-        <label for="nombre">Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        <label>Nombre completo</label>
+        <input type="text" placeholder="Tu nombre" required>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label for="llegada">Llegada</label>
-          <input type="date" id="llegada" name="llegada" required>
+          <label>Llegada</label>
+          <input type="date" required>
         </div>
         <div class="form-group">
-          <label for="salida">Salida</label>
-          <input type="date" id="salida" name="salida" required>
+          <label>Salida</label>
+          <input type="date" required>
         </div>
       </div>
       <div class="form-group">
-        <label for="habitacion">Tipo de habitación</label>
-        <select id="habitacion" name="habitacion" required>
+        <label>Tipo de habitación</label>
+        <select required>
           <option value="">Seleccionar…</option>
           <option>Habitación Sencilla</option>
           <option>Habitación Doble</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="telefono">Teléfono / WhatsApp</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="+52 55 6400 0003" required>
+        <label>Teléfono / WhatsApp</label>
+        <input type="tel" placeholder="+52 55 6400 0003" required>
       </div>
       <button type="submit" class="btn-book">Solicitar reservación</button>
     </form>
@@ -304,8 +302,8 @@
       <a href="tel:+525564000003" class="contact-link">
         <span class="contact-link-icon">📞</span> 55 6400 0003
       </a>
-      <a href="mailto:carreon21diego@gmail.com" class="contact-link">
-        <span class="contact-link-icon">✉️</span> carreon21diego@gmail.com
+      <a href="/cdn-cgi/l/email-protection#583b392a2a3d37366a693c313d3f37183f35393134763b3735" class="contact-link">
+        <span class="contact-link-icon">✉️</span> <span class="__cf_email__" data-cfemail="4c2f2d3e3e2923227e7d2825292b230c2b212d2520622f2321">[email&#160;protected]</span>
       </a>
     </div>
   </div>
@@ -323,7 +321,7 @@
   <a href="#reservar" class="sticky-book">Reservar ahora</a>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Nav scroll
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
