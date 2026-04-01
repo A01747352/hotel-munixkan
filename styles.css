@@ -384,46 +384,43 @@ section { padding: 72px var(--gap); }
 .booking-wa-btns {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 .booking-wa-btn {
   display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 20px 24px;
+  gap: 16px;
+  padding: 18px 22px;
   text-decoration: none;
-  transition: transform .2s, opacity .2s;
   text-align: left;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.5);
+  color: var(--white);
+  transition: border-color .3s, background .3s;
 }
-.booking-wa-btn:hover { transform: translateY(-2px); opacity: .92; }
-
-.booking-wa-primary {
-  background: #25D366;
-  color: #fff;
-}
-.booking-wa-secondary {
-  background: rgba(255,255,255,.15);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,.3);
+.booking-wa-btn:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,.08);
 }
 .booking-wa-icon {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   flex-shrink: 0;
+  opacity: .85;
 }
 .booking-wa-btn span:last-child {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 .booking-wa-btn strong {
   font-family: 'Jost', sans-serif;
-  font-size: .9rem;
+  font-size: .88rem;
   font-weight: 500;
-  letter-spacing: .06em;
+  letter-spacing: .08em;
 }
 .booking-wa-btn small {
-  font-size: .75rem;
-  opacity: .75;
+  font-size: .74rem;
+  opacity: .6;
   font-weight: 300;
 }
 
