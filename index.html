@@ -213,37 +213,30 @@
   <div class="booking-inner">
     <p class="section-label">Reservaciones</p>
     <h2 class="section-title">¿Cuándo nos visitas?</h2>
-    <p class="section-body">Completa el formulario y nos ponemos en contacto contigo para confirmar disponibilidad.</p>
+    <p class="section-body">Contáctanos directo por WhatsApp — respondemos rápido y confirmamos disponibilidad al momento.</p>
 
-    <form class="booking-form" action="https://formspree.io/f/mvzwewon" method="POST">
-      <div class="form-group">
-        <label>Nombre completo</label>
-        <input type="text" placeholder="Tu nombre" required>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Llegada</label>
-          <input type="date" required>
-        </div>
-        <div class="form-group">
-          <label>Salida</label>
-          <input type="date" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Tipo de habitación</label>
-        <select required>
-          <option value="">Seleccionar…</option>
-          <option>Habitación Sencilla</option>
-          <option>Habitación Doble</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Teléfono / WhatsApp</label>
-        <input type="tel" placeholder="+52 55 6400 0003" required>
-      </div>
-      <button type="submit" class="btn-book">Solicitar reservación</button>
-    </form>
+    <div class="booking-wa-btns">
+      <a
+        href="https://wa.me/525564000003?text=Hola%2C%20quiero%20hacer%20una%20reservaci%C3%B3n%20en%20Hotel%20Munixkan.%20Me%20gustar%C3%ADa%20saber%20disponibilidad%20para%20las%20siguientes%20fechas%3A"
+        class="booking-wa-btn booking-wa-primary"
+        target="_blank" rel="noopener">
+        <span class="booking-wa-icon">📅</span>
+        <span>
+          <strong>Hacer una reservación</strong>
+          <small>Te pediremos fecha, tipo de cuarto y nombre</small>
+        </span>
+      </a>
+      <a
+        href="https://wa.me/525564000003?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20los%20precios%20de%20las%20habitaciones%20del%20Hotel%20Munixkan."
+        class="booking-wa-btn booking-wa-secondary"
+        target="_blank" rel="noopener">
+        <span class="booking-wa-icon">💬</span>
+        <span>
+          <strong>Consultar precios</strong>
+          <small>Sencilla, doble y disponibilidad</small>
+        </span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -302,8 +295,8 @@
       <a href="tel:+525564000003" class="contact-link">
         <span class="contact-link-icon">📞</span> 55 6400 0003
       </a>
-      <a href="/cdn-cgi/l/email-protection#583b392a2a3d37366a693c313d3f37183f35393134763b3735" class="contact-link">
-        <span class="contact-link-icon">✉️</span> <span class="__cf_email__" data-cfemail="4c2f2d3e3e2923227e7d2825292b230c2b212d2520622f2321">[email&#160;protected]</span>
+      <a href="mailto:carreon21diego@gmail.com" class="contact-link">
+        <span class="contact-link-icon">✉️</span> carreon21diego@gmail.com
       </a>
     </div>
   </div>
@@ -321,36 +314,6 @@
   <a href="#reservar" class="sticky-book">Reservar ahora</a>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Nav scroll
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  });
-
-  // Mobile menu
-  const menuBtn = document.getElementById('menuBtn');
-  const menuOverlay = document.getElementById('menuOverlay');
-  const menuClose = document.getElementById('menuClose');
-  menuBtn.addEventListener('click', () => menuOverlay.classList.add('open'));
-  menuClose.addEventListener('click', closeMenu);
-  function closeMenu() { menuOverlay.classList.remove('open'); }
-
-  // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => observer.observe(el));
-
-  // Set min date for booking inputs
-  const today = new Date().toISOString().split('T')[0];
-  document.querySelectorAll('input[type="date"]').forEach(i => i.min = today);
-</script>
+<script src="main.js"></script>
 </body>
 </html>
